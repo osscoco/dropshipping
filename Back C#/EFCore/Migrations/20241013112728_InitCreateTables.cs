@@ -119,8 +119,6 @@ namespace EFCore.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     ContactPhone = table.Column<string>(type: "varchar(20)", maxLength: 20, nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    ContactEmail = table.Column<string>(type: "varchar(255)", maxLength: 255, nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
                     DateOfBirth = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     RoleId = table.Column<int>(type: "int", nullable: false)
                 },

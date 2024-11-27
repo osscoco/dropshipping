@@ -35,9 +35,6 @@ namespace EFCore.EntityTypeConfigurations
             builder.Property(u => u.ContactPhone)
                 .HasMaxLength(20);
 
-            builder.Property(u => u.ContactEmail)
-                .HasMaxLength(255);
-
             builder.HasOne(u => u.Role)
                 .WithMany(r => r.Users)
                 .HasForeignKey(u => u.RoleId)

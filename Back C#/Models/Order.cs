@@ -1,4 +1,5 @@
 ﻿using Models.Identity;
+using System.Text.Json.Serialization;
 
 namespace Models
 {
@@ -13,6 +14,7 @@ namespace Models
         public required Address DeliveryAddress { get; set; }
         public required int DeliveryId { get; set; }
         public required Delivery Delivery { get; set; }
+        [JsonIgnore]
         public required ICollection<OrderProduct> OrderProducts { get; set; }
     }
 }

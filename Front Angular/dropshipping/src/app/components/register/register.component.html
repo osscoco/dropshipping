@@ -1,0 +1,81 @@
+<form class="max-w-sm mx-auto" style="margin-top: 4rem;" [formGroup]="registerForm" (ngSubmit)="register()">
+  <div class="mb-5" style="display: flex; flex-direction: row; justify-content: space-between;">
+    <div>
+      <label for="firstName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Prénom</label>
+      <input formControlName="firstName" type="text" id="firstName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Prénom" required />
+      @if (registerForm.get('firstName')?.invalid && (registerForm.get('firstName')?.touched || registerForm.get('firstName')?.dirty))
+      {
+        <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+          Prénom requis
+        </p>
+      }
+    </div>
+    <div>&nbsp;</div>
+    <div>
+      <label for="lastName" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nom</label>
+      <input formControlName="lastName" type="text" id="lastName" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Nom" required />
+      @if (registerForm.get('lastName')?.invalid && (registerForm.get('lastName')?.touched || registerForm.get('lastName')?.dirty))
+      {
+        <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+          Nom requis
+        </p>
+      }
+    </div>
+  </div>
+  <div class="mb-5">
+    <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+    <input formControlName="email" type="text" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="email@email.fr" required />
+    @if (registerForm.get('email')?.invalid && (registerForm.get('email')?.touched || registerForm.get('email')?.dirty))
+    {
+      @if (registerForm.get('email')?.errors?.['required'])
+      {
+        <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+          Email requis
+        </p>
+      }
+      @else if (registerForm.get('email')?.errors?.['email']) 
+      {
+        <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+          Format de l'email invalide
+        </p>
+      }
+    }
+  </div>
+  <div class="mb-5">
+    <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Mot de passe</label>
+    <input formControlName="password" type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="**********" required />
+    @if (registerForm.get('password')?.invalid && (registerForm.get('password')?.touched || registerForm.get('password')?.dirty))
+    {
+      <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+        Mot de passe requis
+      </p>
+    }
+  </div>
+  <div class="mb-5">
+    <label for="contactPhone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Numéro de téléphone</label>
+    <input formControlName="contactPhone" type="text" id="contactPhone" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="0712345678" required />
+    @if (registerForm.get('contactPhone')?.invalid && (registerForm.get('contactPhone')?.touched || registerForm.get('contactPhone')?.dirty))
+    {
+      <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+        Numéro de téléphone requis
+      </p>
+    }
+  </div>
+  <div class="mb-5">
+    <label for="dateOfBirth" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Date de naissance</label>
+    <input formControlName="dateOfBirth" type="date" id="dateOfBirth" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="01/01/2000" required />
+    @if (registerForm.get('dateOfBirth')?.invalid && (registerForm.get('dateOfBirth')?.touched || registerForm.get('dateOfBirth')?.dirty))
+    {
+      <p id="helper-text-explanation" class="mt-2 text-sm text-red-600 dark:text-gray-400">
+        Date de naissance requise
+      </p>
+    }
+  </div>
+
+  @if (registerForm.valid)
+  {
+    <button type="submit" [disabled]="registerForm.invalid" style="opacity: 1; cursor: pointer; transition: background-color 0.3s ease;" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">S'enregistrer</button>
+  } @else {
+    <button type="submit" [disabled]="registerForm.invalid" style="opacity: 0.6; cursor: not-allowed; pointer-events: none; background-color: #3b82f6;" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">S'enregistrer</button>
+  }
+</form>

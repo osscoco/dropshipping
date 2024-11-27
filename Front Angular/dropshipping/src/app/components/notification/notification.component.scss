@@ -1,0 +1,28 @@
+.notification-card {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    color: #fff;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+    z-index: 1000;
+  }
+  
+  .notification-card.success { background-color: #4CAF50; }
+  .notification-card.error { background-color: #f44336; }
+  .notification-card.info { background-color: #2196F3; }
+  .notification-card.warning { background-color: #ff9800; }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+  }

@@ -1,0 +1,14 @@
+/* Style lorsque le bouton est désactivé */
+.btn-form-invalid {
+    opacity: 0.6;            /* Transparence */
+    cursor: not-allowed;      /* Curseur "non autorisé" */
+    pointer-events: none;     /* Désactive les interactions */
+    background-color: #3b82f6; /* Couleur de fond sans effet de survol */
+}
+
+/* Style lorsque le bouton est activé */
+.btn-form-valid {
+    opacity: 1;               /* Opacité normale */
+    cursor: pointer;          /* Curseur par défaut pour le survol */
+    transition: background-color 0.3s ease; /* Transition pour le survol */
+}

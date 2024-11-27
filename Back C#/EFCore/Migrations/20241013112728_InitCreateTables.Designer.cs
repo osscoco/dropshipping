@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCore.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240930203107_InitCreateTables")]
+    [Migration("20241013112728_InitCreateTables")]
     partial class InitCreateTables
     {
         /// <inheritdoc />
@@ -186,10 +186,6 @@ namespace EFCore.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserId"));
-
-                    b.Property<string>("ContactEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
 
                     b.Property<string>("ContactPhone")
                         .HasMaxLength(20)

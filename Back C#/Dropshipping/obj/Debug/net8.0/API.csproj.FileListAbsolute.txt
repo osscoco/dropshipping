@@ -47,3 +47,4 @@ C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\Dropshipping\obj\Debu
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\Dropshipping\obj\Debug\net8.0\API.pdb
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\Dropshipping\obj\Debug\net8.0\API.genruntimeconfig.cache
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\Dropshipping\obj\Debug\net8.0\ref\API.dll
+C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\Dropshipping\obj\Debug\net8.0\API.sourcelink.json

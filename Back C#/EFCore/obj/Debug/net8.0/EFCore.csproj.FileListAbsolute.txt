@@ -16,3 +16,4 @@ C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\EFCore\obj\Debug\net8
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\EFCore\obj\Debug\net8.0\EFCore.pdb
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\EFCore\obj\Debug\net8.0\EFCore.genruntimeconfig.cache
 C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\EFCore\obj\Debug\net8.0\ref\EFCore.dll
+C:\Users\utilisateur\Desktop\ProjetFlorianCorentin\Back C#\EFCore\obj\Debug\net8.0\EFCore.sourcelink.json

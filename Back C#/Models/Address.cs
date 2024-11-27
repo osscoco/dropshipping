@@ -1,4 +1,5 @@
 ﻿using Models.Identity;
+using System.Text.Json.Serialization;
 
 namespace Models
 {
@@ -10,6 +11,7 @@ namespace Models
         public string? AdditionalInfo { get; set; }
         public required int CityId { get; set; }
         public required City City { get; set; }
+        [JsonIgnore]
         public ICollection<Client>? Clients { get; set; }
     }
 }

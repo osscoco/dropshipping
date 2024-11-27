@@ -1,0 +1,7 @@
+@if (notification)
+{
+    <div [ngClass]="notification.type" class="notification-card">
+        <span>{{ notification.message }}</span>
+        <button (click)="close()" class="close-button">✕</button>
+    </div>
+}

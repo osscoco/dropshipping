@@ -184,10 +184,6 @@ namespace EFCore.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserId"));
 
-                    b.Property<string>("ContactEmail")
-                        .HasMaxLength(255)
-                        .HasColumnType("varchar(255)");
-
                     b.Property<string>("ContactPhone")
                         .HasMaxLength(20)
                         .HasColumnType("varchar(20)");

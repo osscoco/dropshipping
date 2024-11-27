@@ -1,4 +1,6 @@
-﻿namespace Models
+﻿using System.Text.Json.Serialization;
+
+namespace Models
 {
     public class Product
     {
@@ -11,6 +13,7 @@
         public string? ImageUrl { get; set; }
         public int? TypeProductId { get; set; }
         public TypeProduct? TypeProduct { get; set; }
+        [JsonIgnore]
         public required ICollection<OrderProduct> OrderProducts { get; set; }
     }
 }

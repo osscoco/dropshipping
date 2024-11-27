@@ -22,7 +22,6 @@ namespace EFCore.EntityTypeConfigurations
             builder.Property(a => a.AdditionalInfo)
                 .HasMaxLength(255);
 
-            // Relation Many-to-One avec City
             builder.HasOne(a => a.City)
                 .WithMany(c => c.Addresses)
                 .HasForeignKey(a => a.CityId)
